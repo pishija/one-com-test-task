@@ -11,6 +11,11 @@
 		87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B015EA21ADA24E00FC47FA /* Assets.xcassets */; };
 		87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */; };
 		87F1551821ADA96600C8C83D /* PresenterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551721ADA96600C8C83D /* PresenterBase.swift */; };
+		87F1551B21ADAAED00C8C83D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F1551921ADAAED00C8C83D /* LoginViewController.xib */; };
+		87F1551C21ADAAED00C8C83D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551A21ADAAED00C8C83D /* LoginViewController.swift */; };
+		87F1551E21ADAAF500C8C83D /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551D21ADAAF500C8C83D /* LoginViewPresenter.swift */; };
+		87F1552021ADAAFB00C8C83D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551F21ADAAFA00C8C83D /* LoginView.swift */; };
+		87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */; };
 		A776855B38554919552855DC /* Pods_Comments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +27,11 @@
 		87B015EA21ADA24E00FC47FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerBase.swift; sourceTree = "<group>"; };
 		87F1551721ADA96600C8C83D /* PresenterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterBase.swift; sourceTree = "<group>"; };
+		87F1551921ADAAED00C8C83D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		87F1551A21ADAAED00C8C83D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87F1551D21ADAAF500C8C83D /* LoginViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		87F1551F21ADAAFA00C8C83D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33FEAB2724388985084A031 /* Pods-Comments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comments.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comments/Pods-Comments.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				87B015EA21ADA24E00FC47FA /* Assets.xcassets */,
+				87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -121,6 +132,8 @@
 		87F1550F21ADA85A00C8C83D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				87F1551A21ADAAED00C8C83D /* LoginViewController.swift */,
+				87F1551921ADAAED00C8C83D /* LoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 		87F1551021ADA85A00C8C83D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				87F1551D21ADAAF500C8C83D /* LoginViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -135,6 +149,7 @@
 		87F1551121ADA85A00C8C83D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				87F1551F21ADAAFA00C8C83D /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F1551B21ADAAED00C8C83D /* LoginViewController.xib in Resources */,
+				87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */,
 				87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F1552021ADAAFB00C8C83D /* LoginView.swift in Sources */,
+				87F1551E21ADAAF500C8C83D /* LoginViewPresenter.swift in Sources */,
+				87F1551C21ADAAED00C8C83D /* LoginViewController.swift in Sources */,
 				87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */,
 				87F1551821ADA96600C8C83D /* PresenterBase.swift in Sources */,
 				87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */,

@@ -13,9 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = UIColor.white
+        let presenter = LoginViewPresenter()
+        window.rootViewController = LoginViewController(presenter: presenter)
+        window.makeKeyAndVisible()
+    
+        self.window = window
+        
+        LoginView.appearance().sloganTextColor = UIColor.white
+        LoginView.appearance().sloganFont = UIFont.boldSystemFont(ofSize: 24.0)
+        LoginView.appearance().loginButtonTextColor = UIColor.white
+        LoginView.appearance().loginButtonFont = UIFont.boldSystemFont(ofSize: 17.0)
+        
         return true
     }
 
