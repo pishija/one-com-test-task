@@ -37,5 +37,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>Comments would like to access your Camera to upload photo(s).</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Comments would like to access your Photo Library to upload photo(s).</string>
 </dict>
 </plist>

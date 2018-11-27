@@ -69,6 +69,18 @@ class LoginViewController: ViewControllerBase, View, LoginViewDelegate {
     func loginView(loginView: LoginView, didTapLogin button: UIButton) {
         self.presenter.onLoginButtonTapped()
     }
+    
+    private var mediaCaptureFlow: MediaCaptureSelectionFlow?
+    
+    func loginView(loginView: LoginView, didTapImageView view: UIImageView) {
+        let mediaCaptureFlow = MediaCaptureSelectionFlow()
+        mediaCaptureFlow.startImageCaptureSelectionFlow(from: self) { (image, success) in
+            if let anImage = image {
+                self.loginView.imageView.image = anImage
+            }
+        }
+        self.mediaCaptureFlow = mediaCaptureFlow
+    }
 }
 
 #if canImport(TTTAttributedLabel)

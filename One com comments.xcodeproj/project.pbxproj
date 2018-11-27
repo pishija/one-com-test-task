@@ -16,6 +16,7 @@
 		87F1551E21ADAAF500C8C83D /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551D21ADAAF500C8C83D /* LoginViewPresenter.swift */; };
 		87F1552021ADAAFB00C8C83D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551F21ADAAFA00C8C83D /* LoginView.swift */; };
 		87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */; };
+		87F1552621ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1552521ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift */; };
 		A776855B38554919552855DC /* Pods_Comments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		87F1551D21ADAAF500C8C83D /* LoginViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		87F1551F21ADAAFA00C8C83D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		87F1552521ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCaptureSelectionFlow.swift; sourceTree = "<group>"; };
 		962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33FEAB2724388985084A031 /* Pods-Comments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comments.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comments/Pods-Comments.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 			children = (
 				87B015E621ADA24E00FC47FA /* Application */,
 				87B015E321ADA24E00FC47FA /* Controllers */,
+				87F1552321ADB93B00C8C83D /* Coordinators */,
 				87B015E921ADA24E00FC47FA /* Resources */,
 				87F1551221ADA88500C8C83D /* Util */,
 			);
@@ -177,6 +180,22 @@
 				87F1551721ADA96600C8C83D /* PresenterBase.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		87F1552321ADB93B00C8C83D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				87F1552421ADB93B00C8C83D /* MediaCapture */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		87F1552421ADB93B00C8C83D /* MediaCapture */ = {
+			isa = PBXGroup;
+			children = (
+				87F1552521ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift */,
+			);
+			path = MediaCapture;
 			sourceTree = "<group>";
 		};
 		B5926B60838E137CD240D676 /* Pods */ = {
@@ -289,6 +308,7 @@
 				87F1551E21ADAAF500C8C83D /* LoginViewPresenter.swift in Sources */,
 				87F1551C21ADAAED00C8C83D /* LoginViewController.swift in Sources */,
 				87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */,
+				87F1552621ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift in Sources */,
 				87F1551821ADA96600C8C83D /* PresenterBase.swift in Sources */,
 				87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */,
 			);

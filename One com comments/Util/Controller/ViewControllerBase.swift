@@ -8,6 +8,10 @@ class ViewControllerBase: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if let _ = self.scrollView {
             self.registerForKeyboardNotifications()

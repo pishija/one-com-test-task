@@ -2,6 +2,7 @@ import UIKit
 
 protocol LoginViewDelegate: class {
     func loginView(loginView: LoginView, didTapLogin button: UIButton)
+    func loginView(loginView: LoginView, didTapImageView view: UIImageView)
 }
 
 class LoginView: UIView {
@@ -14,6 +15,9 @@ class LoginView: UIView {
     @IBOutlet weak var passwordTextField: UITextField?
     
     @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var editImageView: UIImageView!
     
     weak var delegate: LoginViewDelegate?
     
@@ -38,13 +42,44 @@ class LoginView: UIView {
     func setupUI() {
         self.passwordTextField?.isSecureTextEntry = true
         self.passwordTextField?.placeholder = NSLocalizedString("Password", comment: "")
-        self.usernameTextField.placeholder = NSLocalizedString("Username", comment: "")        
+        self.usernameTextField.placeholder = NSLocalizedString("Username", comment: "")
+        self.usernameTextField.inputAccessoryView = self.accessoryToolbarView()
+        
+        self.editImageView.tintColor = UIColor.white
+        self.imageView.layer.borderWidth = 1.0
+        self.imageView.layer.borderColor = UIColor.white.cgColor
     }
+    
+    //MARK: Actions
     
     @IBAction
     private func loginButtonTapped(_ sender: UIButton) {
         self.delegate?.loginView(loginView: self, didTapLogin: sender)
     }
+    
+    @IBAction func imageViewTapped(_ sender: Any) {
+        self.delegate?.loginView(loginView: self, didTapImageView: self.logoImageView)
+    }
+    
+    //MARK: Util
+    
+    func accessoryToolbarView() -> UIToolbar {
+        let toolbar: UIToolbar = UIToolbar()
+        
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(hideKeyboard))
+        
+        toolbar.barStyle = UIBarStyle.default
+        toolbar.items = [space, doneButton]
+        toolbar.sizeToFit()
+        
+        return toolbar
+    }
+    
+    @objc func hideKeyboard() {
+        self.usernameTextField.resignFirstResponder()
+    }
+    
     
 }
 
