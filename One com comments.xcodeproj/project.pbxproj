@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B015E721ADA24E00FC47FA /* AppDelegate.swift */; };
 		87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B015EA21ADA24E00FC47FA /* Assets.xcassets */; };
+		87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */; };
+		87F1551821ADA96600C8C83D /* PresenterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551721ADA96600C8C83D /* PresenterBase.swift */; };
 		A776855B38554919552855DC /* Pods_Comments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +20,8 @@
 		87B015E721ADA24E00FC47FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B015E821ADA24E00FC47FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87B015EA21ADA24E00FC47FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerBase.swift; sourceTree = "<group>"; };
+		87F1551721ADA96600C8C83D /* PresenterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterBase.swift; sourceTree = "<group>"; };
 		962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33FEAB2724388985084A031 /* Pods-Comments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comments.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comments/Pods-Comments.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 				87B015E621ADA24E00FC47FA /* Application */,
 				87B015E321ADA24E00FC47FA /* Controllers */,
 				87B015E921ADA24E00FC47FA /* Resources */,
+				87F1551221ADA88500C8C83D /* Util */,
 			);
 			path = "One com comments";
 			sourceTree = "<group>";
@@ -89,6 +94,9 @@
 		87B015E521ADA24E00FC47FA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				87F1550F21ADA85A00C8C83D /* Controller */,
+				87F1551021ADA85A00C8C83D /* Presenter */,
+				87F1551121ADA85A00C8C83D /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -108,6 +116,52 @@
 				87B015EA21ADA24E00FC47FA /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		87F1550F21ADA85A00C8C83D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87F1551021ADA85A00C8C83D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		87F1551121ADA85A00C8C83D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87F1551221ADA88500C8C83D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				87F1551321ADA88500C8C83D /* Controller */,
+				87F1551421ADA8FD00C8C83D /* Presenter */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		87F1551321ADA88500C8C83D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87F1551421ADA8FD00C8C83D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				87F1551721ADA96600C8C83D /* PresenterBase.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B5926B60838E137CD240D676 /* Pods */ = {
@@ -215,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */,
+				87F1551821ADA96600C8C83D /* PresenterBase.swift in Sources */,
+				87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
