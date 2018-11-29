@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		87AB19D921AEAA54008A7990 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19D821AEAA54008A7990 /* Coordinator.swift */; };
 		87AB19DC21AEAADA008A7990 /* ApplicationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */; };
+		87AB19DF21AFE13C008A7990 /* LeaveCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19DE21AFE13C008A7990 /* LeaveCommentView.swift */; };
+		87AB19E121AFE152008A7990 /* LeaveCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AB19E021AFE152008A7990 /* LeaveCommentView.xib */; };
 		87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B015E721ADA24E00FC47FA /* AppDelegate.swift */; };
 		87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B015EA21ADA24E00FC47FA /* Assets.xcassets */; };
 		87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */; };
@@ -30,6 +32,8 @@
 		009454D3CDAB56B54683D654 /* Pods-Comments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comments/Pods-Comments.debug.xcconfig"; sourceTree = "<group>"; };
 		87AB19D821AEAA54008A7990 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowCoordinator.swift; sourceTree = "<group>"; };
+		87AB19DE21AFE13C008A7990 /* LeaveCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentView.swift; sourceTree = "<group>"; };
+		87AB19E021AFE152008A7990 /* LeaveCommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveCommentView.xib; sourceTree = "<group>"; };
 		87B015CE21ADA20200FC47FA /* Comments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B015E721ADA24E00FC47FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B015E821ADA24E00FC47FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 				87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */,
 			);
 			path = ApplicationFlowCoordinator;
+			sourceTree = "<group>";
+		};
+		87AB19DD21AFE0DB008A7990 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				87AB19DE21AFE13C008A7990 /* LeaveCommentView.swift */,
+				87AB19E021AFE152008A7990 /* LeaveCommentView.xib */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		87B015C521ADA20200FC47FA = {
@@ -191,6 +204,7 @@
 		87F1551221ADA88500C8C83D /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				87AB19DD21AFE0DB008A7990 /* Controls */,
 				87AB19D721AEAA54008A7990 /* Coordinator */,
 				87F1551321ADA88500C8C83D /* Controller */,
 				87F1551421ADA8FD00C8C83D /* Presenter */,
@@ -326,6 +340,7 @@
 			files = (
 				87F1553121ADC40600C8C83D /* CommentCell.xib in Resources */,
 				87F1552D21ADC2E900C8C83D /* CommentsFeedViewController.xib in Resources */,
+				87AB19E121AFE152008A7990 /* LeaveCommentView.xib in Resources */,
 				87F1551B21ADAAED00C8C83D /* LoginViewController.xib in Resources */,
 				87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */,
 				87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */,
@@ -364,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87AB19DF21AFE13C008A7990 /* LeaveCommentView.swift in Sources */,
 				87F1552C21ADC2E900C8C83D /* CommentsFeedViewController.swift in Sources */,
 				87F1552021ADAAFB00C8C83D /* LoginView.swift in Sources */,
 				87AB19D921AEAA54008A7990 /* Coordinator.swift in Sources */,
