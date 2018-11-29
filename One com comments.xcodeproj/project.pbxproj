@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87AB19D921AEAA54008A7990 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19D821AEAA54008A7990 /* Coordinator.swift */; };
+		87AB19DC21AEAADA008A7990 /* ApplicationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */; };
 		87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B015E721ADA24E00FC47FA /* AppDelegate.swift */; };
 		87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B015EA21ADA24E00FC47FA /* Assets.xcassets */; };
 		87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */; };
@@ -17,11 +19,17 @@
 		87F1552021ADAAFB00C8C83D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551F21ADAAFA00C8C83D /* LoginView.swift */; };
 		87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */; };
 		87F1552621ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1552521ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift */; };
+		87F1552C21ADC2E900C8C83D /* CommentsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1552A21ADC2E900C8C83D /* CommentsFeedViewController.swift */; };
+		87F1552D21ADC2E900C8C83D /* CommentsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F1552B21ADC2E900C8C83D /* CommentsFeedViewController.xib */; };
+		87F1553021ADC40600C8C83D /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1552E21ADC40600C8C83D /* CommentCell.swift */; };
+		87F1553121ADC40600C8C83D /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F1552F21ADC40600C8C83D /* CommentCell.xib */; };
 		A776855B38554919552855DC /* Pods_Comments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		009454D3CDAB56B54683D654 /* Pods-Comments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Comments/Pods-Comments.debug.xcconfig"; sourceTree = "<group>"; };
+		87AB19D821AEAA54008A7990 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowCoordinator.swift; sourceTree = "<group>"; };
 		87B015CE21ADA20200FC47FA /* Comments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B015E721ADA24E00FC47FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B015E821ADA24E00FC47FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +42,10 @@
 		87F1551F21ADAAFA00C8C83D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		87F1552521ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCaptureSelectionFlow.swift; sourceTree = "<group>"; };
+		87F1552A21ADC2E900C8C83D /* CommentsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsFeedViewController.swift; sourceTree = "<group>"; };
+		87F1552B21ADC2E900C8C83D /* CommentsFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsFeedViewController.xib; sourceTree = "<group>"; };
+		87F1552E21ADC40600C8C83D /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		87F1552F21ADC40600C8C83D /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33FEAB2724388985084A031 /* Pods-Comments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comments.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comments/Pods-Comments.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +68,22 @@
 				962B5D22B0011DC654BBA3EE /* Pods_Comments.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87AB19D721AEAA54008A7990 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				87AB19D821AEAA54008A7990 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		87AB19DA21AEAADA008A7990 /* ApplicationFlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */,
+			);
+			path = ApplicationFlowCoordinator;
 			sourceTree = "<group>";
 		};
 		87B015C521ADA20200FC47FA = {
@@ -100,6 +128,9 @@
 		87B015E421ADA24E00FC47FA /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				87F1552821ADC2B100C8C83D /* Cell */,
+				87F1552921ADC2B100C8C83D /* Presenter */,
+				87F1552721ADC2B100C8C83D /* ViewController */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -160,6 +191,7 @@
 		87F1551221ADA88500C8C83D /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				87AB19D721AEAA54008A7990 /* Coordinator */,
 				87F1551321ADA88500C8C83D /* Controller */,
 				87F1551421ADA8FD00C8C83D /* Presenter */,
 			);
@@ -185,6 +217,7 @@
 		87F1552321ADB93B00C8C83D /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				87AB19DA21AEAADA008A7990 /* ApplicationFlowCoordinator */,
 				87F1552421ADB93B00C8C83D /* MediaCapture */,
 			);
 			path = Coordinators;
@@ -196,6 +229,31 @@
 				87F1552521ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift */,
 			);
 			path = MediaCapture;
+			sourceTree = "<group>";
+		};
+		87F1552721ADC2B100C8C83D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87F1552A21ADC2E900C8C83D /* CommentsFeedViewController.swift */,
+				87F1552B21ADC2E900C8C83D /* CommentsFeedViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		87F1552821ADC2B100C8C83D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				87F1552E21ADC40600C8C83D /* CommentCell.swift */,
+				87F1552F21ADC40600C8C83D /* CommentCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		87F1552921ADC2B100C8C83D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B5926B60838E137CD240D676 /* Pods */ = {
@@ -266,6 +324,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F1553121ADC40600C8C83D /* CommentCell.xib in Resources */,
+				87F1552D21ADC2E900C8C83D /* CommentsFeedViewController.xib in Resources */,
 				87F1551B21ADAAED00C8C83D /* LoginViewController.xib in Resources */,
 				87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */,
 				87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */,
@@ -304,13 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F1552C21ADC2E900C8C83D /* CommentsFeedViewController.swift in Sources */,
 				87F1552021ADAAFB00C8C83D /* LoginView.swift in Sources */,
+				87AB19D921AEAA54008A7990 /* Coordinator.swift in Sources */,
 				87F1551E21ADAAF500C8C83D /* LoginViewPresenter.swift in Sources */,
 				87F1551C21ADAAED00C8C83D /* LoginViewController.swift in Sources */,
 				87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */,
+				87F1553021ADC40600C8C83D /* CommentCell.swift in Sources */,
 				87F1552621ADB93B00C8C83D /* MediaCaptureSelectionFlow.swift in Sources */,
 				87F1551821ADA96600C8C83D /* PresenterBase.swift in Sources */,
 				87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */,
+				87AB19DC21AEAADA008A7990 /* ApplicationFlowCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

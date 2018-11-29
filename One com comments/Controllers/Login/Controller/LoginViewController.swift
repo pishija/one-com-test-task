@@ -8,12 +8,16 @@ import TTTAttributedLabel
 import MBProgressHUD
 #endif
 
+protocol LoginViewControllerDelegate: class {
+    func loginViewControllerDidLogin(controller: LoginViewController)
+}
 
 class LoginViewController: ViewControllerBase, View, LoginViewDelegate {
 
     typealias Presenter = LoginViewPresenter
     
     var presenter: LoginViewPresenter
+    weak var delegate: LoginViewControllerDelegate?
     
     var loginView: LoginView {
         return self.view as! LoginView
@@ -68,6 +72,7 @@ class LoginViewController: ViewControllerBase, View, LoginViewDelegate {
     
     func loginView(loginView: LoginView, didTapLogin button: UIButton) {
         self.presenter.onLoginButtonTapped()
+        self.delegate?.loginViewControllerDidLogin(controller: self)
     }
     
     private var mediaCaptureFlow: MediaCaptureSelectionFlow?

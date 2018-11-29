@@ -144,7 +144,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="95q-Gi-ztS" secondAttribute="trailing" id="N4l-Jc-rtX"/>
                         <constraint firstItem="95q-Gi-ztS" firstAttribute="top" secondItem="Rvc-Bk-gVB" secondAttribute="top" constant="42" id="Nyx-VV-np2"/>
-                        <constraint firstAttribute="bottom" secondItem="95q-Gi-ztS" secondAttribute="bottom" id="dd9-ei-2Av"/>
+                        <constraint firstAttribute="bottom" secondItem="95q-Gi-ztS" secondAttribute="bottom" constant="42" id="dd9-ei-2Av"/>
                         <constraint firstItem="95q-Gi-ztS" firstAttribute="leading" secondItem="Rvc-Bk-gVB" secondAttribute="leading" id="wcc-Sv-Mir"/>
                     </constraints>
                 </scrollView>

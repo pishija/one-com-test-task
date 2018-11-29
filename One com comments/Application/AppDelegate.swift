@@ -12,14 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var applicationFlowCoordinator: ApplicationFlowCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.backgroundColor = UIColor.white
-        let presenter = LoginViewPresenter()
-        window.rootViewController = LoginViewController(presenter: presenter)
         window.makeKeyAndVisible()
     
         self.window = window
@@ -28,6 +28,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LoginView.appearance().sloganFont = UIFont.boldSystemFont(ofSize: 24.0)
         LoginView.appearance().loginButtonTextColor = UIColor.white
         LoginView.appearance().loginButtonFont = UIFont.boldSystemFont(ofSize: 17.0)
+        
+        CommentCell.appearance().usernameColor = UIColor(red: 7.0 / 255.0, green: 35.0 / 255.0, blue: 62.0 / 255.0, alpha: 1.0)
+        CommentCell.appearance().usernameFont = UIFont.boldSystemFont(ofSize: 18.0)
+        CommentCell.appearance().dateColor = UIColor(red: 137.0 / 255.0, green: 137.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
+        CommentCell.appearance().dateFont = UIFont.systemFont(ofSize: 13.0)
+        CommentCell.appearance().commentColor = UIColor(red: 137.0 / 255.0, green: 137.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
+        CommentCell.appearance().commentFont = UIFont.systemFont(ofSize: 17.0)
+        CommentCell.appearance().likeColor = UIColor(red: 137.0 / 255.0, green: 137.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
+        CommentCell.appearance().likeFont = UIFont.systemFont(ofSize: 15.0)
+        CommentCell.appearance().shareColor = UIColor(red: 137.0 / 255.0, green: 137.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
+        CommentCell.appearance().shareFont = UIFont.systemFont(ofSize: 15.0)
+        CommentCell.appearance().deleteColor = UIColor(red: 220.0 / 255.0, green: 38.0 / 255.0, blue: 65.0 / 255.0, alpha: 1.0)
+        CommentCell.appearance().deleteFont = UIFont.systemFont(ofSize: 15.0)
+        
+        
+        self.applicationFlowCoordinator = ApplicationFlowCoordinator(window: window)
+        self.applicationFlowCoordinator.start()
         
         return true
     }
