@@ -11,6 +11,7 @@
 		87AB19DC21AEAADA008A7990 /* ApplicationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */; };
 		87AB19DF21AFE13C008A7990 /* LeaveCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AB19DE21AFE13C008A7990 /* LeaveCommentView.swift */; };
 		87AB19E121AFE152008A7990 /* LeaveCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AB19E021AFE152008A7990 /* LeaveCommentView.xib */; };
+		87AB19E421AFF90F008A7990 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87AB19E321AFF90F008A7990 /* GoogleService-Info.plist */; };
 		87B015EB21ADA24E00FC47FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B015E721ADA24E00FC47FA /* AppDelegate.swift */; };
 		87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B015EA21ADA24E00FC47FA /* Assets.xcassets */; };
 		87F1551621ADA95D00C8C83D /* ViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F1551521ADA95D00C8C83D /* ViewControllerBase.swift */; };
@@ -34,6 +35,7 @@
 		87AB19DB21AEAADA008A7990 /* ApplicationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowCoordinator.swift; sourceTree = "<group>"; };
 		87AB19DE21AFE13C008A7990 /* LeaveCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentView.swift; sourceTree = "<group>"; };
 		87AB19E021AFE152008A7990 /* LeaveCommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveCommentView.xib; sourceTree = "<group>"; };
+		87AB19E321AFF90F008A7990 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87B015CE21ADA20200FC47FA /* Comments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B015E721ADA24E00FC47FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B015E821ADA24E00FC47FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 				87AB19E021AFE152008A7990 /* LeaveCommentView.xib */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		87AB19E221AFF90F008A7990 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				87AB19E321AFF90F008A7990 /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		87B015C521ADA20200FC47FA = {
@@ -170,6 +180,7 @@
 		87B015E921ADA24E00FC47FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				87AB19E221AFF90F008A7990 /* Firebase */,
 				87B015EA21ADA24E00FC47FA /* Assets.xcassets */,
 				87F1552121ADB0ED00C8C83D /* LaunchScreen.xib */,
 			);
@@ -344,6 +355,7 @@
 				87F1551B21ADAAED00C8C83D /* LoginViewController.xib in Resources */,
 				87F1552221ADB0ED00C8C83D /* LaunchScreen.xib in Resources */,
 				87B015ED21ADA24E00FC47FA /* Assets.xcassets in Resources */,
+				87AB19E421AFF90F008A7990 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
