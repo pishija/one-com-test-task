@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LoginView.appearance().sloganTextColor = UIColor.white
         LoginView.appearance().sloganFont = UIFont.boldSystemFont(ofSize: 24.0)
+        LoginView.appearance().errorTextColor = UIColor.red
+        LoginView.appearance().errorFont = UIFont.systemFont(ofSize: 15.0)
         LoginView.appearance().loginButtonTextColor = UIColor.white
         LoginView.appearance().loginButtonFont = UIFont.boldSystemFont(ofSize: 17.0)
         

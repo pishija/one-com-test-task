@@ -9,9 +9,9 @@
 import UIKit
 
 protocol CommentCellDelegate: class {
-    func comment(cell: CommentCell, didTapLike sender: AnyObject)
-    func comment(cell: CommentCell, didTapShare sender: AnyObject)
-    func comment(cell: CommentCell, didTapDelete sender: AnyObject)
+    func comment(cell: CommentCell, didTapLike sender: Any)
+    func comment(cell: CommentCell, didTapShare sender: Any)
+    func comment(cell: CommentCell, didTapDelete sender: Any)
 }
 
 class CommentCell: UITableViewCell {
@@ -29,6 +29,8 @@ class CommentCell: UITableViewCell {
     @IBOutlet private weak var dateIcon: UIImageView!
     
     @IBOutlet private weak var contentLeadingConstraint: NSLayoutConstraint!
+    
+    weak var delegate: CommentCellDelegate?
     
     
     //MARK: Overrides
@@ -101,6 +103,13 @@ class CommentCell: UITableViewCell {
             self.contentLeadingConstraint.constant = 0.0
         }
     }
+    
+    //MARK: Actions
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        self.delegate?.comment(cell: self, didTapDelete: sender)
+    }
+    
 }
 
 

@@ -19,6 +19,9 @@ class ApplicationFlowCoordinator: Coordinator, CoordinatorDelegate, LoginViewCon
     
     private var rootViewController: UINavigationController = UINavigationController()
     
+    // This is stored here for simplicoty, view controller factory pattern solves this
+    private var repository = CommentsRepositoryFirebase()
+    
     
     //MARK: Initializer
     
@@ -33,7 +36,7 @@ class ApplicationFlowCoordinator: Coordinator, CoordinatorDelegate, LoginViewCon
         
         self.window.rootViewController = self.rootViewController
         
-        let presenter = LoginViewPresenter()
+        let presenter = LoginViewPresenter(repository: self.repository)
         let loginViewController = LoginViewController(presenter: presenter)
         loginViewController.delegate = self
         self.rootViewController.setViewControllers([loginViewController], animated: false)
@@ -47,8 +50,9 @@ class ApplicationFlowCoordinator: Coordinator, CoordinatorDelegate, LoginViewCon
     
     //MARK: LoginViewController
     
-    func loginViewControllerDidLogin(controller: LoginViewController) {
-        let commentsFeedController = CommentsFeedViewController()
+    func loginView(controller: LoginViewController, didLoginWith user: User) {
+        let presenter = CommentsFeedPresenter(repository: self.repository, user: user)
+        let commentsFeedController = CommentsFeedViewController(presenter: presenter)
         self.rootViewController.setViewControllers([commentsFeedController], animated: true)
     }
  

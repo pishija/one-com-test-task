@@ -9,7 +9,7 @@ import MBProgressHUD
 #endif
 
 protocol LoginViewControllerDelegate: class {
-    func loginViewControllerDidLogin(controller: LoginViewController)
+    func loginView(controller: LoginViewController, didLoginWith user: User)
 }
 
 class LoginViewController: ViewControllerBase, View, LoginViewDelegate {
@@ -72,7 +72,6 @@ class LoginViewController: ViewControllerBase, View, LoginViewDelegate {
     
     func loginView(loginView: LoginView, didTapLogin button: UIButton) {
         self.presenter.onLoginButtonTapped()
-        self.delegate?.loginViewControllerDidLogin(controller: self)
     }
     
     private var mediaCaptureFlow: MediaCaptureSelectionFlow?
