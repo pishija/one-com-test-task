@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol CommentCellDelegate: class {
     func comment(cell: CommentCell, didTapLike sender: Any)
@@ -51,6 +52,11 @@ class CommentCell: UITableViewCell {
         self.contentLeadingConstraint.constant = 0.0
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.userImageView?.layer.cornerRadius = self.userImageView.bounds.width / 2.0
+        self.userImageView.clipsToBounds = true
+    }
     
     //MARK: Interface
     
@@ -71,7 +77,7 @@ class CommentCell: UITableViewCell {
     }
     
     func setImageFrom(url: URL) {
-        //TODO: 
+        self.userImageView.sd_setImage(with: url, completed: nil)
     }
     
     func setLikes(text: String) {

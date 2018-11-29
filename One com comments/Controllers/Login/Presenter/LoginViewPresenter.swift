@@ -17,7 +17,8 @@ class LoginViewPresenter: PresenterBase<LoginViewController> {
         self.view?.hideErrorMessage()
         if let username = self.view?.loginView.usernameTextField.text, username.count > 0{
             self.view?.showTakeoverLoading()
-            self.repository.createUser(with: username, image: nil) { (user, error) in
+            let image = self.view?.loginView.imageView.image
+            self.repository.createUser(with: username, image: image) { (user, error) in
                 guard error == nil else {
                     self.view?.showError(message: error!.localizedDescription)
                     return

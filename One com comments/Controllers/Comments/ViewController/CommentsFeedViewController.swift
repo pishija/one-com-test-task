@@ -78,6 +78,10 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
         
         cell.delegate = self
         
+        if let url = item.user.imageUrl {
+            cell.setImageFrom(url: url)
+        }
+        
         cell.set(username: item.user.username)
         cell.set(comment: item.text)
         cell.setDate(text: "6h ago")

@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
 
 
 struct User: Codable {
     var id: String
     var username: String
+    var imageUrl: URL?
     
 }
 
@@ -39,26 +41,56 @@ protocol CommentsRepository {
 class CommentsRepositoryFirebase: CommentsRepository{
     
     private var ref: DatabaseReference = Database.database().reference()
+    private let storageRef = Storage.storage().reference()
     
+    private let dispatchGroup = DispatchGroup()
     
     func createUser(with username: String, image: UIImage?, completion: @escaping (User?, Error?) -> Void) {
         
         let userRef = self.ref.child("users").childByAutoId()
+        
         if let newUserId = userRef.key {
-            let user = User(id: newUserId, username: username)
-            
-            do {
-                let userDictionary =  try user.asDictionary()
-                userRef.setValue(userDictionary) { (error, ref) in
+            var imageURL: URL? = nil
+            if let anImage = image?.resized(toWidth: UIScreen.main.bounds.width), let data = anImage.pngData()  {
+                self.dispatchGroup.enter()
+                // Create a reference to the file you want to upload
+                let riversRef = storageRef.child("images/\(newUserId).jpg")
+                
+                // Upload the file to the path "images/rivers.jpg"
+                let _ = riversRef.putData(data, metadata: nil) { (metadata, error) in
                     guard error == nil else {
                         completion(nil, error)
                         return
                     }
-                    completion(user, nil)
+                    riversRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else {
+                            completion(nil, error)
+                            return
+                        }
+                        imageURL = downloadURL
+                        self.dispatchGroup.leave()
+                    }
                 }
             }
-            catch let error {
-                completion(nil, error)
+            
+            
+            // Notify dispatch group
+            self.dispatchGroup.notify(queue: .main) {
+                let user = User(id: newUserId, username: username, imageUrl: imageURL)
+                
+                do {
+                    let userDictionary =  try user.asDictionary()
+                    userRef.setValue(userDictionary) { (error, ref) in
+                        guard error == nil else {
+                            completion(nil, error)
+                            return
+                        }
+                        completion(user, nil)
+                    }
+                }
+                catch let error {
+                    completion(nil, error)
+                }
             }
         } else {
             //TODO: Add custom error
@@ -134,5 +166,22 @@ extension Decodable {
         let data = try JSONSerialization.data(withJSONObject: from, options: .prettyPrinted)
         let decoder = JSONDecoder()
         self = try decoder.decode(Self.self, from: data)
+    }
+}
+
+extension UIImage {
+    func resized(withPercentage percentage: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    func resized(toWidth width: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
