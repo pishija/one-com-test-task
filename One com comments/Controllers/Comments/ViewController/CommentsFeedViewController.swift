@@ -58,13 +58,31 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
     }
     
     override func append(items: [Comment]) {
+        var nextIndex: Int = self.items.count
+
         super.append(items: items)
-        self.tableView.reloadData()
+        var indexPaths: [IndexPath] = []
+        for _ in items {
+            let indexPath = IndexPath(row: nextIndex, section: 0)
+            indexPaths.append(indexPath)
+            nextIndex = nextIndex + 1
+        }
+        
+        self.tableView.insertRows(at: indexPaths, with: .bottom)
+        if self.tableView.contentOffset.y > (self.tableView.contentSize.height - self.tableView.frame.size.height - 100), indexPaths.count > 0 {
+            self.tableView.scrollToRow(at: indexPaths.last!, at: .bottom, animated: true)
+        }
     }
     
     override func remove(item: Comment) {
+        let index = self.items.firstIndex(of: item)
         super.remove(item: item)
-        self.tableView.reloadData()
+        if index != nil {
+            let indexPath = IndexPath(row: index!, section: 0)
+            self.tableView.deleteRows(at: [indexPath], with: .bottom)
+        } else {
+            self.tableView.reloadData()
+        }
     }
     
     //MARK: UITableViewDatasource
@@ -125,7 +143,6 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
             self.presenter.onSendButtonTapped(text: text)
         }
         view.text = ""
-        _ = view.resignFirstResponder()
     }
     
     //MARK: Keyboard
@@ -134,6 +151,8 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
         self.leaveCommentViewBottomConstraint.constant = 0.0
         
         if let info: NSDictionary = sender.userInfo as NSDictionary? {
+            
+            
             
             let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
             
@@ -146,6 +165,8 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
             let animationCurveRawNSN = info[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
             let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
             let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+            
+            
             
             UIView.animate(withDuration: duration,
                            delay: TimeInterval(0),
@@ -162,11 +183,17 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
             let value: NSValue = info.value(forKey: UIResponder.keyboardFrameBeginUserInfoKey) as! NSValue
             let keyboardSize: CGSize = value.cgRectValue.size
             
+            
             let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
             
             let contentInsets: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height + 128.0, right: 0.0)
             self.scrollView?.contentInset = contentInsets
             self.scrollView?.scrollIndicatorInsets = contentInsets
+            
+            if self.tableView.contentOffset.y > (self.tableView.contentSize.height - self.tableView.frame.size.height - 100) {
+                let indexPath = IndexPath(row: self.items.count - 1, section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            }
             
             self.leaveCommentViewBottomConstraint.constant = keyboardSize.height
             

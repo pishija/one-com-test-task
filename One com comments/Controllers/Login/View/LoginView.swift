@@ -37,6 +37,13 @@ class LoginView: UIView {
         self.setupUI()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.loginButton.layer.cornerRadius = 8.0
+        self.usernameTextField.layer.cornerRadius = 8.0
+    }
+    
     //MARK: Private
     
     func setupUI() {
