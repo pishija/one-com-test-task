@@ -3,11 +3,13 @@ import UIKit
 class ViewControllerBase: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     
     var keyboardHeight: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityIndicator?.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,11 +26,13 @@ class ViewControllerBase: UIViewController {
     }
     
     func showTakeoverLoading(){
-        //TODO:
+        self.activityIndicator?.isHidden = false
+        self.activityIndicator?.startAnimating()
     }
     
     func hideTakeoverLoading(){
-        //TODO:
+        self.activityIndicator?.stopAnimating()
+        self.activityIndicator?.isHidden = true
     }
     
     func unregisterForKeyboardNotifications(){

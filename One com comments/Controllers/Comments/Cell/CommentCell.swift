@@ -50,6 +50,7 @@ class CommentCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.contentLeadingConstraint.constant = 0.0
+        self.userImageView.image = UIImage(named: "user")
     }
     
     override func layoutSubviews() {

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsFeedViewController" customModule="Comments" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Uzx-5M-M2c" id="Ojg-kq-owg"/>
                 <outlet property="leaveCommentViewBottomConstraint" destination="McE-sZ-sJ1" id="QLf-91-FaP"/>
                 <outlet property="scrollView" destination="Jz4-jP-9Ku" id="p6r-jq-GM5"/>
                 <outlet property="tableView" destination="Jz4-jP-9Ku" id="NNf-19-ijd"/>
@@ -40,15 +41,20 @@
                         <outlet property="delegate" destination="-1" id="Otg-Pu-fKG"/>
                     </connections>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-5M-M2c">
+                    <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Jz4-jP-9Ku" secondAttribute="bottom" id="9Gk-vH-rHP"/>
+                <constraint firstItem="Uzx-5M-M2c" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="B0d-Le-fFJ"/>
                 <constraint firstAttribute="trailing" secondItem="JCg-ET-PUP" secondAttribute="trailing" id="EBb-Qq-mjB"/>
                 <constraint firstAttribute="trailing" secondItem="Jz4-jP-9Ku" secondAttribute="trailing" id="GMx-KN-AGm"/>
                 <constraint firstAttribute="bottom" secondItem="JCg-ET-PUP" secondAttribute="bottom" id="McE-sZ-sJ1"/>
                 <constraint firstItem="Jz4-jP-9Ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bj1-hz-YL9"/>
                 <constraint firstItem="JCg-ET-PUP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o1U-1z-je9"/>
+                <constraint firstItem="Uzx-5M-M2c" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pFZ-zm-qdc"/>
                 <constraint firstAttribute="top" secondItem="Jz4-jP-9Ku" secondAttribute="top" id="qjg-8F-mRS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

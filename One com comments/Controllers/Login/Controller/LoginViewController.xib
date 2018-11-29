@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Comments" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="VVv-84-Lym" id="Ywm-Bu-Jo3"/>
                 <outlet property="scrollView" destination="Rvc-Bk-gVB" id="zT0-RI-xqT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95q-Gi-ztS" userLabel="centeredView">
-                            <rect key="frame" x="0.0" y="42" width="375" height="509.5"/>
+                            <rect key="frame" x="0.0" y="42" width="375" height="474.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-Bs-QUa">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
@@ -37,6 +38,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="VVv-84-Lym">
+                                            <rect key="frame" x="177.5" y="168" width="20" height="20"/>
+                                        </activityIndicatorView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fTt-ww-gDb">
                                             <rect key="frame" x="101.5" y="0.0" width="172" height="130"/>
                                             <constraints>
@@ -47,11 +51,13 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="VVv-84-Lym" firstAttribute="top" secondItem="LzW-Ry-8WJ" secondAttribute="bottom" constant="10" id="4cm-Go-KiW"/>
                                         <constraint firstAttribute="trailing" secondItem="LzW-Ry-8WJ" secondAttribute="trailing" constant="20" id="523-Ep-MIl"/>
                                         <constraint firstItem="LzW-Ry-8WJ" firstAttribute="top" secondItem="fTt-ww-gDb" secondAttribute="bottom" constant="7.5" id="9FD-f3-B3f"/>
                                         <constraint firstItem="LzW-Ry-8WJ" firstAttribute="leading" secondItem="U9V-Bs-QUa" secondAttribute="leading" constant="20" id="Y8R-z9-w4V"/>
                                         <constraint firstAttribute="bottom" secondItem="LzW-Ry-8WJ" secondAttribute="bottom" id="c2S-gz-fkl"/>
                                         <constraint firstItem="fTt-ww-gDb" firstAttribute="centerX" secondItem="U9V-Bs-QUa" secondAttribute="centerX" id="imT-jf-x3N"/>
+                                        <constraint firstItem="VVv-84-Lym" firstAttribute="centerX" secondItem="U9V-Bs-QUa" secondAttribute="centerX" id="pkr-Km-oTw"/>
                                         <constraint firstItem="fTt-ww-gDb" firstAttribute="top" secondItem="U9V-Bs-QUa" secondAttribute="top" id="uAr-si-Ogx"/>
                                     </constraints>
                                 </view>
@@ -62,7 +68,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6T2-Fh-3Py">
-                                    <rect key="frame" x="94" y="208" width="187.5" height="187.5"/>
+                                    <rect key="frame" x="131.5" y="208" width="112.5" height="112.5"/>
                                     <color key="backgroundColor" red="0.65098039220000004" green="0.66666666669999997" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="6T2-Fh-3Py" secondAttribute="height" multiplier="1:1" id="ei7-If-dES"/>
@@ -72,13 +78,13 @@
                                     </connections>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil-edit-button" translatesAutoresizingMaskIntoConstraints="NO" id="xzE-79-Ivk">
-                                    <rect key="frame" x="243" y="357.5" width="28.5" height="28"/>
+                                    <rect key="frame" x="217" y="293.5" width="17" height="17"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="xzE-79-Ivk" secondAttribute="height" multiplier="1:1" id="agP-eU-qHn"/>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SOR-g3-nfK">
-                                    <rect key="frame" x="0.0" y="415.5" width="375" height="110"/>
+                                    <rect key="frame" x="0.0" y="380.5" width="375" height="110"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-KK-5oB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
@@ -135,7 +141,7 @@
                                 <constraint firstItem="SOR-g3-nfK" firstAttribute="leading" secondItem="95q-Gi-ztS" secondAttribute="leading" id="XxD-Kb-dQy"/>
                                 <constraint firstAttribute="trailing" secondItem="U9V-Bs-QUa" secondAttribute="trailing" id="Zsu-Ck-izV"/>
                                 <constraint firstAttribute="bottom" secondItem="SOR-g3-nfK" secondAttribute="bottom" constant="-16" id="bXK-73-Ygz"/>
-                                <constraint firstItem="SOR-g3-nfK" firstAttribute="top" secondItem="6T2-Fh-3Py" secondAttribute="bottom" constant="20" id="eBx-1k-6Bv"/>
+                                <constraint firstItem="SOR-g3-nfK" firstAttribute="top" secondItem="6T2-Fh-3Py" secondAttribute="bottom" constant="60" id="eBx-1k-6Bv"/>
                                 <constraint firstItem="U9V-Bs-QUa" firstAttribute="top" secondItem="95q-Gi-ztS" secondAttribute="top" id="gp9-iJ-lfL"/>
                                 <constraint firstAttribute="trailing" secondItem="SOR-g3-nfK" secondAttribute="trailing" id="qy1-wz-H9g"/>
                             </constraints>
@@ -162,7 +168,7 @@
                 <constraint firstItem="95q-Gi-ztS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vda-vX-crc"/>
                 <constraint firstItem="6T2-Fh-3Py" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ace-cO-koy"/>
                 <constraint firstAttribute="bottom" secondItem="yxX-jA-hyh" secondAttribute="bottom" id="hGN-TO-b8i"/>
-                <constraint firstItem="6T2-Fh-3Py" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="jzY-Bp-4BL"/>
+                <constraint firstItem="6T2-Fh-3Py" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" id="jzY-Bp-4BL"/>
                 <constraint firstAttribute="trailing" secondItem="95q-Gi-ztS" secondAttribute="trailing" id="oXp-IF-bCQ"/>
             </constraints>
             <connections>

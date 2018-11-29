@@ -16,6 +16,7 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var leaveCommentViewBottomConstraint: NSLayoutConstraint!
+
     
     //MARK: Initialization
     
@@ -120,7 +121,7 @@ class CommentsFeedViewController: FeedControllerBase<Comment>, UITableViewDelega
     //MARK: LeaveCommentViewDelegate
     
     func leaveComment(view: LeaveCommentView, didTapSend button: UIButton) {
-        if let text = view.text {
+        if let text = view.text, text.count > 0 {
             self.presenter.onSendButtonTapped(text: text)
         }
         view.text = ""

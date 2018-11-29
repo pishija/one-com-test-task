@@ -23,7 +23,9 @@ class CommentsFeedPresenter: FeedPresenterBase<CommentsFeedViewController> {
     //MARK: Presenter
     
     override func loadData() {
+        self.view?.showTakeoverLoading()
         self.repository.getAllComments { (comments, error) in
+            self.view?.hideTakeoverLoading()
             guard error == nil else {
                 //TODO: Show error
                 return

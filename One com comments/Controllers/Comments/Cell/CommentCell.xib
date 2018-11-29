@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="349" height="124.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mta-Yr-gyd" userLabel="topHolder">
-                                <rect key="frame" x="0.0" y="0.0" width="349" height="94.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="349" height="89.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="PQP-Wb-Ypi">
                                         <rect key="frame" x="12" y="24" width="59.5" height="59.5"/>
@@ -49,7 +49,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-JP-F5v">
-                                        <rect key="frame" x="96.5" y="54.5" width="236.5" height="30"/>
+                                        <rect key="frame" x="96.5" y="54.5" width="236.5" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                             <constraint firstAttribute="trailing" secondItem="Mta-Yr-gyd" secondAttribute="trailing" id="Fp4-Sc-FvH"/>
                             <constraint firstItem="Mta-Yr-gyd" firstAttribute="leading" secondItem="l3P-nh-vlW" secondAttribute="leading" id="HgT-qV-455"/>
                             <constraint firstAttribute="bottom" secondItem="9jj-f8-Ajl" secondAttribute="bottom" id="VFy-yk-1Py"/>
-                            <constraint firstItem="9jj-f8-Ajl" firstAttribute="top" secondItem="Mta-Yr-gyd" secondAttribute="bottom" id="fr4-FL-Sfs"/>
+                            <constraint firstItem="9jj-f8-Ajl" firstAttribute="top" secondItem="Mta-Yr-gyd" secondAttribute="bottom" constant="5" id="fr4-FL-Sfs"/>
                             <constraint firstItem="9jj-f8-Ajl" firstAttribute="leading" secondItem="l3P-nh-vlW" secondAttribute="leading" id="hXM-ol-xtf"/>
                             <constraint firstAttribute="trailing" secondItem="9jj-f8-Ajl" secondAttribute="trailing" id="lWT-CU-yuE"/>
                         </constraints>
